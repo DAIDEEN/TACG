@@ -1,0 +1,59 @@
+# NWD-TAG-CGL 损失配置文件
+# 总损失: L_total = λ_TAG * L_TAG + λ_NWD * L_NWD + λ_CGL * L_CGL + λ_obj * L_obj
+
+# ========== NWD-TAG-CGL==========
+# 启用/禁用各损失组件
+use_nwd: True                      # 使用NWD回归损失
+use_tag_sl: True                 # 使用TAG-SL分类损失
+use_cgl: True                   # 使用CGL对比损失
+nwd_constant: 11                 # NWD归一化常数
+
+# TAG-SL参数
+tag_sl_alpha: 0.8             # TAG-SL alpha参数
+tag_sl_gamma: 1               # TAG-SL gamma参数
+
+# CGL参数
+cgl_constant: 1                  # CGL对比损失的NWD常数
+cgl_temperature: 0.1             # 温度参数
+
+# 损失权重
+lambda_tag: 2.0                 # TAG-SL损失权重
+lambda_nwd: 2.0                  # NWD损失权重
+lambda_obj: 0.5                  # 目标损失权重
+lambda_cgl: 0.0005                # CGL损失权重
+
+# ========== baseline超参数 ==========
+lr0: 0.01                        # 初始学习率 (SGD=1E-2, Adam=1E-3)
+lrf: 0.1                         # 最终OneCycleLR学习率 (lr0 * lrf)
+momentum: 0.937                  # SGD动量/Adam beta1
+weight_decay: 0.0005             # 优化器权重衰减
+warmup_epochs: 3.0               # warmup轮数
+warmup_momentum: 0.8             # warmup初始动量
+warmup_bias_lr: 0.1              # warmup初始偏置学习率
+box: 0.05                        # box损失权重
+cls: 0.3                         # 分类损失权重
+cls_pw: 1.0                      # BCE分类正样本权重
+obj: 0.7                         # 目标损失权重（按像素缩放）
+obj_pw: 1.0                      # BCE目标正样本权重
+iou_t: 0.20                       # IoU训练阈值
+anchor_t: 4.0                    # 锚框倍数阈值
+fl_gamma: 0.0                    # focal loss gamma
+
+# ========== 数据增强参数 ==========
+hsv_h: 0.015                     # 图像HSV色相增强（比例）
+hsv_s: 0.7                       # 图像HSV饱和度增强（比例）
+hsv_v: 0.4                       # 图像HSV亮度增强（比例）
+degrees: 0.0                     # 图像旋转（度）
+translate: 0.2                   # 图像平移（比例）
+scale: 0.9                       # 图像缩放（增益）
+shear: 0.0                       # 图像剪切（度）
+perspective: 0.0                 # 图像透视变换（比例，0-0.001）
+flipud: 0.0                     # 图像上下翻转概率
+fliplr: 0.5                      # 图像左右翻转概率
+mosaic: 1.0                      # mosaic增强概率 
+mixup: 0.15                      # mixup增强概率
+copy_paste: 0.0                  # copy-paste增强概率
+paste_in: 0.15                   # paste-in概率
+
+# ========== 损失函数选择 ==========
+loss_ota: 0                       # 0 = ComputeLossNWD  1 = ComputeLossOTA 
