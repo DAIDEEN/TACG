@@ -32,7 +32,7 @@ The code supports the following infrared small target detection datasets:
 - [IRSTD-1k](https://github.com/RuiZhang97/ISNet/tree/master)
 - [NUAA-SIRST](https://github.com/YimianDai/sirst)
 - [NUDT-SIRST](https://github.com/YeRen123455/Infrared-Small-Target-Detection)
-This dataset is the bounding box annotation version of the existing infrared small target public dataset. Download link:BaiduYun Drive(https://github.com/YeRen123455/Infrared-Small-Target-Detection)
+This dataset is the bounding box annotation version of the existing infrared small target public dataset. Download link:[Google Drive](https://drive.google.com/file/d/1goc6D3647xrcDChOvaCycG2op4nfMZpp/view?pli=1)
 ### Dataset Structure
 
 ```
