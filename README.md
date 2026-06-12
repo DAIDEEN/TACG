@@ -84,7 +84,7 @@ python train.py \
 
 ```bash
 python test.py \
-    --weights irstd_best.pt \
+    --weights irstd.pt \
     --data IRSTD-1k.yaml 
 ```
 
