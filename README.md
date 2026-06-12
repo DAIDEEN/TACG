@@ -29,9 +29,9 @@ pip install -r requirements.txt
 ## Dataset Preparation
 
 The code supports the following infrared small target detection datasets:
-- [IRSTD-1k](https://www.cse.cuhk.edu.hk/leojia/projects/hsal/irstd.html)
+- [IRSTD-1k](https://github.com/RuiZhang97/ISNet/tree/master)
 - [NUAA-SIRST](https://github.com/YimianDai/sirst)
-- [NUDT-SIRST](https://github.com/JiamingHan/NUDT-SIRST)
+- [NUDT-SIRST](https://github.com/YeRen123455/Infrared-Small-Target-Detection)
 
 ### Dataset Structure
 
