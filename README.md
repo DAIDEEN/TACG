@@ -34,6 +34,8 @@ The code supports the following infrared small target detection datasets:
 - [NUDT-SIRST](https://github.com/YeRen123455/Infrared-Small-Target-Detection)
 
 This dataset is the bounding box annotation version of the existing infrared small target public dataset. Download link:[Google Drive](https://drive.google.com/file/d/1goc6D3647xrcDChOvaCycG2op4nfMZpp/view?pli=1)
+
+[IRSTD-1k weight address](https://pan.baidu.com/s/1eKhEvMdxDExU7D3Dvggaxw?pwd=h7bp 提取码: h7bp)
 ### Dataset Structure
 
 ```
